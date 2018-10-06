@@ -1,0 +1,7 @@
+export(eLP.poly)
+export(LP.XY)
+export(LP.QDC)
+importFrom("utils", "head", "tail")
+importFrom("stats", "approxfun", "cov", "ecdf", "pchisq", "poly",
+             "predict", "quantile", "smooth.spline")
+importFrom("graphics", "axis", "legend", "lines", "title")
