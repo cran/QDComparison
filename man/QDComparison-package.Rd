@@ -8,7 +8,7 @@
 %\tabular{ll}{
 %Package: QDComparison\cr
 %Type: Package\cr
-%Version: 1.0\cr
+%Version: 2.0\cr
 %Date: 2018-09-28\cr
 %License: GPL 2\cr
 %NeedsCompilation: no\cr

@@ -11,7 +11,7 @@ This function runs the entire quantile and distribution comparison, giving LP co
 }
 \usage{
 LP.QDC(x,y,m=6,smooth="TRUE",method="BIC",alpha=0.05,
-       B=500,spar=0.45,plot="TRUE",how.low=0.25)
+       B=1000,spar=NA,plot="TRUE",inset=-0.2)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -39,21 +39,21 @@ Alpha-level for confidence bands, default: 0.05
 }
 
   \item{B}{
-Number of permutations of the x labels, default: 500
+Number of permutations of the x labels, default: 1000
 }
 
 
 
   \item{spar}{
-"spar" in "smooth.splines" of upper and lower bounds of confidence bands, default: 0.45
+"spar" in "smooth.spline" of upper and lower bounds of confidence bands, default: NA, let smooth.splines function figure it out
 }
 
   \item{plot}{
 Should plotting be performed, default: TRUE
 }
 
-  \item{how.low}{
-Graphical parameter that controls where the color legend is plotted, default: 0.25
+  \item{inset}{
+Graphical parameter that controls where the color legend is plotted below x-axis, default: -0.2
 }
 
 
@@ -80,6 +80,13 @@ y-values of the upper and lower bounds of the confidence band
 
   \item{d.hat}{
 y-values of the comparison density
+}
+
+  \item{sparL}{
+"spar" value in "smooth.spline" of lower bound of the null band
+}
+  \item{sparU}{
+"spar" value in "smooth.spline" of upper bound of the null band
 }
 
   \item{out.above}{

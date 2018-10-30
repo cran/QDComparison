@@ -4,9 +4,16 @@ function(d.hat,u,Q,spar=0.45){
 OUT <- list()
 dhat <- c(d.hat,tail(d.hat,1))
 Qs <- c(0,u)
-
+if (is.na(spar)){
+lower <- smooth.spline(Qs,c(Q[1,],tail(Q[1,],1)), cv=F)
+upper <- smooth.spline(Qs,c(Q[2,],tail(Q[2,],1)), cv=F)
+sparL <- lower$spar
+sparU <- upper$spar
+} else {
 lower <- smooth.spline(Qs,c(Q[1,],tail(Q[1,],1)), spar=spar)
 upper <- smooth.spline(Qs,c(Q[2,],tail(Q[2,],1)), spar=spar)
+sparL <- sparU <- spar
+}
 
 above <- below <- c()
 
@@ -57,12 +64,14 @@ above_ints <- c(above_ints,seqle_above$values[i],(seqle_above$values[i]+seqle_ab
 below_ints <- sort(below_ints)
 above_ints <- sort(above_ints)
 
-mat_below <- t(matrix(Qs[below_ints],2))#,))
-mat_above <- t(matrix(Qs[above_ints],2))#,))
+mat_below <- t(matrix(Qs[below_ints],2))
+mat_above <- t(matrix(Qs[above_ints],2))
 
 OUT$below_ints <- below_ints
 OUT$above_ints <- above_ints
 OUT$mat_below <- mat_below
 OUT$mat_above <- mat_above
+OUT$sparU <- sparU
+OUT$sparL <- sparL
 return(OUT)
 }
