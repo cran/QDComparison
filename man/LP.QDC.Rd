@@ -6,7 +6,7 @@ The main function for two-sample quantile and distribution comparison
 
 }
 \description{
-This function runs the entire quantile and distribution comparison, giving LP comeans, LP Fourier coefficients, LPINFOR test statistic, p-value, estimated comparison density with null-band, and intervals where the comparison density is above or below the null band
+This function runs the entire quantile and distribution comparison, giving LP comoments, LP coefficients, LPINFOR test statistic, p-value, estimated comparison density with null-band, and intervals where the comparison density is above or below the null band
 
 }
 \usage{
@@ -23,7 +23,7 @@ Response variable with measured values
 }
 
   \item{m}{
-Number of LP comeans and LP Fourier coefficients to be calculated, default: 6
+Number of LP comoments and LP coefficients to be calculated, default: 6
 }
 
   \item{smooth}{
@@ -31,7 +31,7 @@ If smoothing should be applied, default: TRUE
 }
 
   \item{method}{
-Smoothing method, default: BIC
+Smoothing method as AIC or BIC, default: BIC
 }
 
   \item{alpha}{
@@ -66,7 +66,9 @@ Subhadeep Mukhopadhyay
 }
 
 \references{ 
-Jungreis, D. and Mukhopadhyay, S. (2018), "Two-Sample Quantile and Distribution Comparisons"
+Jungreis, D., (2019) "Unification of Continuous, Discrete, and Mixed Distribution Two-Sample Testing with Inferences in the Quantile Domain"
+
+Mukhopadhyay, S. and Parzen, E. (2014), "LP Approach to Statistical Modeling", arXiv:1405.2601.
 
  }
 
@@ -90,27 +92,27 @@ y-values of the comparison density
 }
 
   \item{out.above}{
-Quantile intervals where f1 dominates the pooled distribution
+Quantile intervals where group 1 dominates the pooled distribution
 }
 
   \item{out.below}{
-Quantile intervals where f0 dominates the pooled distribution
+Quantile intervals where group 0 dominates the pooled distribution
 }
 
-  \item{LP.comeans.0 }{
-LP comeans, conditioned on X=0
+  \item{LP.comoment.0 }{
+LP comoments, conditioned on X=0
 }
 
   \item{LP.coef.0}{
-LP Fourier coefficients, conditioned on X=0
+LP coefficients, conditioned on X=0
 }
 
-  \item{LP.comeans.1}{
-LP comeans, conditioned on X=1
+  \item{LP.comoment.1}{
+LP comoments, conditioned on X=1
 }
 
   \item{LP.coef.1}{
-LP Fourier coefficients, conditioned on X=1
+LP coefficients, conditioned on X=1
 }
 
   \item{LPINFOR}{

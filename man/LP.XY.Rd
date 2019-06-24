@@ -2,10 +2,10 @@
 \alias{LP.XY}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-A function to compute LP comeans, LP Fourier coefficients, LPINFOR test statistic, and a p-value of distribution equality
+A function to compute LP comoments, LP coefficients, LPINFOR test statistic, and a p-value of distribution equality
 }
 \description{
-This function computes LP-comeans, LP-Fourier coefficients, LPINFOR test statistic, and the corresponding p-value of for testing equality of two distributions
+This function computes LP comoments, LP coefficients, LPINFOR test statistic, and the corresponding p-value of for testing equality of two distributions.
 }
 \usage{
 LP.XY(x,y,m=6,smooth="TRUE",method="BIC")
@@ -20,7 +20,7 @@ Response variable with measured values
 }
 
   \item{m}{
-Number of LP comeans and LP Fourier coefficients to be calculated, default: 6
+Number of LP comoments and LP coefficients to be calculated, default: 6
 }
 
   \item{smooth}{
@@ -37,20 +37,20 @@ Smoothing method, default: BIC
 
 A list containing:
 
-  \item{LP.comean.0 }{
-LP comeans, conditioned on X=0
+  \item{LP.comoment.0 }{
+LP comoments, conditioned on X=0
 }
 
   \item{LP.coef.0}{
-LP Fourier coefficients, conditioned on X=0
+LP coefficients, conditioned on X=0
 }
 
-  \item{LP.comean.1}{
-LP comeans, conditioned on X=1
+  \item{LP.comoment.1}{
+LP comoments, conditioned on X=1
 }
 
   \item{LP.coef.1}{
-LP Fourier coefficients, conditioned on X=1
+LP coefficients, conditioned on X=1
 }
 
   \item{LPINFOR}{
@@ -72,7 +72,7 @@ David Jungreis
 }
 
 \references{ 
-Jungreis, D. and Mukhopadhyay, S. (2018), "Two-Sample Quantile and Distribution Comparisons"
+Jungreis, D., (2019) "Unification of Continuous, Discrete, and Mixed Distribution Two-Sample Testing with Inferences in the Quantile Domain"
 
 Mukhopadhyay, S. and Parzen, E. (2014), "LP Approach to Statistical Modeling", arXiv:1405.2601.
  }

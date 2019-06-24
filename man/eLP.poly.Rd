@@ -32,9 +32,11 @@ Subhadeep Mukhopadhyay
 }
 
 \references{ 
+
+Jungreis, D., (2019) "Unification of Continuous, Discrete, and Mixed Distribution Two-Sample Testing with Inferences in the Quantile Domain"
+
 Mukhopadhyay, S. and Parzen, E. (2014), "LP Approach to Statistical Modeling", arXiv:1405.2601.
 
-Mukhopadhyay, S., and Wang, K (2018), "A Nonparametric Approach to High-dimensional K-sample Comparison Problem".  
  }
 \examples{
 x <- c(rep(0,200),rep(1,200))

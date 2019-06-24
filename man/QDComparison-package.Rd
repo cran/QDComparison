@@ -8,12 +8,12 @@
 %\tabular{ll}{
 %Package: QDComparison\cr
 %Type: Package\cr
-%Version: 2.0\cr
-%Date: 2018-09-28\cr
+%Version: 3.0\cr
+%Date: 2019-06-24\cr
 %License: GPL 2\cr
 %NeedsCompilation: no\cr
 %Repository: CRAN\cr
-%Date/Publication: 2017-11-20 09:20:35 UTC
+%Date/Publication: 2019-06-24 09:20:35 UTC
 %}
 %
 %}
@@ -23,7 +23,9 @@ Maintainer: David Jungreis <dbjungreis@gmail.com>
 
 }
 \references{ 
-Jungreis, D. and Mukhopadhyay, S. (2018), "Two-Sample Quantile and Distribution Comparisons"
+Jungreis, D., (2019) "Unification of Continuous, Discrete, and Mixed Distribution Two-Sample Testing with Inferences in the Quantile Domain"
+
+Mukhopadhyay, S., (2013) "Nonparametric  Inference  for  High  Dimensional  Data,""  Ph.D.  diss., Texas A&M University, College Station, Texas.
 
 Mukhopadhyay, S. and Parzen, E. (2014), "LP Approach to Statistical Modeling", arXiv:1405.2601.
  }
